@@ -72,6 +72,5 @@ func main() {
 			modifiedCount++
 		}
 	}
-
-	fmt.Println(fmt.Sprintf(`::set-output name=modifiedFiles::%d`, modifiedCount))
+	os.Setenv("modifiedFiles", fmt.Sprintf("%d", modifiedCount))
 }
